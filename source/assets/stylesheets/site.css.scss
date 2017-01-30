@@ -1,0 +1,32 @@
+// ----------------------------------------------------------------------------
+// Global imports
+// ----------------------------------------------------------------------------
+@import "normalize";
+@import "susy";
+
+// ----------------------------------------------------------------------------
+// The susy map with configuration for the toolkit
+// ----------------------------------------------------------------------------
+$susy: (
+    container: 1140px,
+    columns: 12,
+    global-box-sizing: border-box,
+
+    debug: (image: show) // Show the grid
+);
+
+// Switch to the box model mode
+@include border-box-sizing;
+
+// ----------------------------------------------------------------------------
+// Import the base style modules. First the base modules. The order matters for
+// these kind of modules
+// ----------------------------------------------------------------------------
+@import "base/typography";
+
+// ----------------------------------------------------------------------------
+// Import the style modules. They should be independent, so the order doesnt
+// matter.
+// ----------------------------------------------------------------------------
+@import "modules/intro";
+@import "modules/layout";

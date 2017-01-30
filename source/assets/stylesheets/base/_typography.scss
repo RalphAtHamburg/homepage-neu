@@ -1,0 +1,51 @@
+// ----------------------------------------------------------------------------
+// The two webfonts. SommetRounded for headlines and Gesta for copy text
+// ----------------------------------------------------------------------------
+@font-face {
+    font-family: 'SommetRounded-Regular';
+    src: font-url('321FAB_0_0.eot');
+    src: font-url('321FAB_0_0.eot?#iefix') format('embedded-opentype'),
+         font-url('321FAB_0_0.woff2') format('woff2'),
+         font-url('321FAB_0_0.woff') format('woff'),
+         font-url('321FAB_0_0.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Gesta-Regular';
+    src: font-url('321FAB_1_0.eot');
+    src: font-url('321FAB_1_0.eot?#iefix') format('embedded-opentype'),
+         font-url('321FAB_1_0.woff2') format('woff2'),
+         font-url('321FAB_1_0.woff') format('woff'),
+         font-url('321FAB_1_0.ttf') format('truetype');
+}
+
+// Used for vertical rhythm
+$global-multiple: 24px;
+// ----------------------------------------------------------------------------
+// Two areas text about frontend and application development
+// ----------------------------------------------------------------------------
+body {
+    font-family: Gesta-Regular;
+    line-height: $global-multiple;
+
+    // Switch on/off grid for vertical rhythm
+    background-image: repeating-linear-gradient(to bottom,
+                                                transparent 0px,
+                                                transparent ($global-multiple - 1),
+                                                            lightgrey ($global-multiple - 1),
+                                                            lightgrey $global-multiple);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: SommetRounded-Regular;
+}
+
+h1 {
+  line-height: 48px;
+  margin: 24px 0;
+}
+
+p {
+  line-height: 24px;
+  margin: 24px 0;
+}
