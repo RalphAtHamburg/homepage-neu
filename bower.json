@@ -1,0 +1,14 @@
+{
+  "name": "middleman-tachyons",
+  "version": "0.0.1",
+  "description": "Template for tachyons using middleman.",
+  "keywords": [
+    "middleman",
+    "tachyons"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "tachyons": "~4"
+  }
+}

@@ -23,6 +23,14 @@ configure :development do
   activate :livereload
 end
 
+# Activate sprockets
+activate :sprockets
+# Add bower's directory to sprockets asset path
+after_configuration do
+  @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
+  sprockets.append_path File.join "#{root}", @bower_config["directory"]
+end
+
 ################################################################################
 # View Helpers
 # Methods defined in the helpers block are available in templates
