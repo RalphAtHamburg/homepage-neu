@@ -14,31 +14,14 @@
 
   %body{:class => "w-100 gesta near-black bg-white #{page_classes}"}
 
-    %main.cf.w-100.mw9.ph3.ph5-ns.pv4.pv5-ns
+    %main.cf.w-100.pa2
 
-      %header.fl-l.w-third-l.pr4-l
+      = partial "header"
 
-        %h1.f2.lh-title.fw9.mt0.mb3.pt3.bt.bw2.b--near-black.sommet-rounded{:style => "border-width: 0.25rem;"}
-          = config[:site_name]
-          %small.f6.fw3.mh1= config[:version]
+      .f2.sommet-rounded.pa4.tracked.black-90
+        = t("home.claim")
+        
+      .cf.w-100
+        = yield
 
-        %p.mw6.f3.lh-title.fw6.mid-gray
-          Combines
-          %a.link.light-blue.hover-blue{:href => "https://middlemanapp.com"} Middleman
-          and
-          %a.link.light-blue.hover-blue{:href => "http://tachyons.io/"} Tachyons
-          in a simple boilerplate framework to help kick off front-end web projects.
-
-        %p.f6.fw3
-          Created by
-          = succeed "." do
-            %a.link.light-blue.hover-blue{:href => "http://socialweb-development.de"} Ralph Möcklinghoff
-
-      .fl-l.w-two-thirds-l.pl4-l
-        .f5.lh-copy
-          = yield
-
-      %footer.cf.w-100.gesta
-        .tc.mt3
-          copyright
-          = copyright_years("2001")
+      = partial "footer"

@@ -53,6 +53,11 @@ helpers do
 end
 
 ################################################################################
+# The :i18n extension provides a way to localize the site.
+################################################################################
+activate :i18n
+
+################################################################################
 # Configure the directorys
 ################################################################################
 
@@ -60,7 +65,6 @@ config[:css_dir] = 'assets/stylesheets'
 config[:js_dir] = 'assets/javascripts'
 config[:images_dir] = 'assets/images'
 config[:fonts_dir] = 'assets/webfonts'
-config[:partials_dir] = 'partials'
 
 configure :development do
   set :debug_assets, true
