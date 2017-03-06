@@ -1,1 +1,28 @@
 //= require tachyons
+
+@font-face {
+  font-family: 'sommet-rounded';
+  src: url('../webfonts/321FAB_0_0.eot');
+  src: url('../webfonts/321FAB_0_0.eot?#iefix')
+       format('embedded-opentype'),url('../webfonts/321FAB_0_0.woff2')
+       format('woff2'),url('../webfonts/321FAB_0_0.woff')
+       format('woff'),url('../webfonts/321FAB_0_0.ttf')
+       format('truetype');
+}
+
+@font-face {font-family: 'gesta';
+  src: url('../webfonts/321FAB_1_0.eot');
+  src: url('../webfonts/321FAB_1_0.eot?#iefix')
+       format('embedded-opentype'),url('../webfonts/321FAB_1_0.woff2')
+       format('woff2'),url('../webfonts/321FAB_1_0.woff')
+       format('woff'),url('ommet-rounded../webfonts/321FAB_1_0.ttf')
+       format('truetype');
+}
+
+.gesta {
+  font-family: gesta;
+}
+
+.sommet-rounded {
+  font-family: sommet-rounded;
+}

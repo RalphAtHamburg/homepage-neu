@@ -1,3 +1,7 @@
+# Local configs
+set :site_name, 'Middleman with Tachyons'
+set :version,   'v0.0.1'
+
 ###
 # Page options, layouts, aliases and proxies
 ###

@@ -5,30 +5,40 @@
     %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
     %meta{:charset => "utf-8"}/
     %meta{:content => "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no", :name => "viewport"}/
+
     / Use title if it's in the page YAML frontmatter
     %title= current_page.data.title || "Middleman"
 
     = stylesheet_link_tag :site
-    = javascript_include_tag :all
+    = javascript_include_tag :site
 
-  %body{:class => "w-100 sans-serif near-black bg-white #{page_classes}"}
+  %body{:class => "w-100 gesta near-black bg-white #{page_classes}"}
+
     %main.cf.w-100.mw9.ph3.ph5-ns.pv4.pv5-ns
+
       %header.fl-l.w-third-l.pr4-l
-        %h1.f2.lh-title.fw9.mt0.mb3.pt3.bt.bw2.b--near-black{:style => "border-width: 0.25rem;"}
+
+        %h1.f2.lh-title.fw9.mt0.mb3.pt3.bt.bw2.b--near-black.sommet-rounded{:style => "border-width: 0.25rem;"}
           = config[:site_name]
           %small.f6.fw3.mh1= config[:version]
+
         %p.mw6.f3.lh-title.fw6.mid-gray
           Combines
-          = succeed "," do
-            %a.link.hot-pink.hover-blue{:href => "https://middlemanapp.com"} Middleman
-          %a.link.hot-pink.hover-blue{:href => "http://brunch.io/"} Brunch
+          %a.link.light-blue.hover-blue{:href => "https://middlemanapp.com"} Middleman
           and
-          %a.link.hot-pink.hover-blue{:href => "http://tachyons.io/"} Tachyons
+          %a.link.light-blue.hover-blue{:href => "http://tachyons.io/"} Tachyons
           in a simple boilerplate framework to help kick off front-end web projects.
+
         %p.f6.fw3
           Created by
           = succeed "." do
-            %a.link.hot-pink.hover-blue{:href => "http://www.pushcode.com"} Push Code
+            %a.link.light-blue.hover-blue{:href => "http://socialweb-development.de"} Ralph Möcklinghoff
+
       .fl-l.w-two-thirds-l.pl4-l
         .f5.lh-copy
           = yield
+
+      %footer.cf.w-100.gesta
+        .tc.mt3
+          copyright
+          = copyright_years("2001")
