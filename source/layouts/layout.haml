@@ -10,11 +10,10 @@
     %title= current_page.data.title || "Middleman"
 
     = stylesheet_link_tag :site
-    = javascript_include_tag :site
 
-  %body{:class => "w-100 gesta near-black bg-white #{page_classes}"}
+  %body{:class => "gesta near-black bg-white #{page_classes}"}
 
-    %main.cf.w-100.pa2
+    %main.mw8.center.pa2.pa4-ns
 
       = partial "header"
 

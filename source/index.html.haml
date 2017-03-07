@@ -1,43 +1,46 @@
-.fl.w-100.f1.sommet-rounded.black-90
+.fl.w-100.pv4.f1.sommet-rounded.black-90
   = t("index.headline")
 
-.fl.w-100.f2.sommet-rounded.tracked.black-90
+.fl.w-100
+  = image_tag 'banner.jpg', :alt => "banner"
+
+.fl.w-100.pv4.f3.lh-copy.tracked.sommet-rounded.black-90
   = t("index.claim")
 
 .fl.w-100.w-50-ns
-  .f3
+  .f4.b
     = t("index.applications_title")
   %p.f4.lh-copy
     = t("index.applications")
 
 .fl.w-100.w-50-ns
-  .f3
+  .f4.b
     = t("index.sites_title")
   %p.f4.lh-copy
     = t("index.sites")
 
-.fl.w-100.w-third-ns.ph3
-  %p.tc.pb2.bb.bw2.b--light-blue
+.fl.w-100.w-third-ns.f5
+  %p.tc.b.mv4
     = t("index.twitter")
   %a.twitter-timeline.dib{"data-dnt" => "true", "data-widget-id" => "421354655507951616", href: "https://twitter.com/RalphAtHamburg"}
 
-.fl.w-100.w-third-ns.ph3
-  %p.tc.pb2.bb.bw2.b--light-blue
+.fl.w-100.w-third-ns.ph2.f5
+  %p.tc.b.mv4
     = t("index.about_title")
-  %p
+  %p.lh-copy.f5
     = t("index.about")
 
-  %p.tc.pb2.bb.bw2.b--light-blue
+  %p.tc.f5.b.mv4
     = t("index.coworking_title")
-  %p
+  %p.f5.lh-copy
     = t("index.coworking")
 
-.fl.w-100.w-third-ns.ph3
-  %p.tc.pb2.bb.bw2.b--light-blue
+.fl.w-100.w-third-ns.ph2.ph4-ns.p
+  %p.tc.pb2.f5.b.mv4
     = t("index.dates")
   %div
     %a.dib{:href => "http://re-publica.de", :title => "re:publica 16 - TEN"}
-      %img{:alt => "re:publica 17 #LoveOutLoud", :src => "https://re-publica.com/files/banner/rp17_Banner_300X250.gif"}/
+      = image_tag 'https://re-publica.com/files/banner/rp17_Banner_440X150.gif', :alt => 're:publica 17 #LoveOutLoud'
 
     - data.events.dates.each do |d|
       %div
