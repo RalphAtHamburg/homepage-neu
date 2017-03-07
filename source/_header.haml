@@ -7,12 +7,12 @@
 
   .fl.w-30
     %a.link.dim.light-blue.dib.mr3.sommet-rounded{:href => "/index.html", :title => @logo}
-      = t("header.logo")
+      = @logo
 
   %nav.fl.w-70.tr
     %a.link.dim.black-90.mr3{:href => "/about.html", :title => @about}
-      = t("header.about")
+      = @about
     %a.link.dim.black-90.mr3{:href => "#", :title => @blog}
-      = t("header.blog")
-    %a.link.dim.black-90.mr3{:href => "/contact.html", :title => @contact}
-      = t("header.contact")
+      = @blog
+    %a.link.dim.black-90{:href => "/contact.html", :title => @contact}
+      = @contact

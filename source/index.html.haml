@@ -1,25 +1,62 @@
-.pa2
+.fl.w-100.f1.sommet-rounded.black-90
+  = t("index.headline")
 
-  .fl.w-100.f1.sommet-rounded.black-90
-    = t("index.headline")
+.fl.w-100.f2.sommet-rounded.tracked.black-90
+  = t("index.claim")
 
-  .f2.sommet-rounded.pa4.tracked.black-90
-    = t("index.claim")
+.fl.w-100.w-50-ns
+  .f3
+    = t("index.applications_title")
+  %p.f4.lh-copy
+    = t("index.applications")
 
-  .w-100.center.mw9
-    %p.fl.w-100.w-50-ns.f4.lh-copy.pa2
-      = t("index.applications")
-    %p.fl.w-100.w-50-ns.f4.lh-copy.pa2
-      = t("index.sites")
+.fl.w-100.w-50-ns
+  .f3
+    = t("index.sites_title")
+  %p.f4.lh-copy
+    = t("index.sites")
 
-    .fl.w-100.w-third-ns.pa3
-      %p.tc.pb2.bb.bw2.b--light-blue
-        Twitter
+.fl.w-100.w-third-ns.ph3
+  %p.tc.pb2.bb.bw2.b--light-blue
+    = t("index.twitter")
+  %a.twitter-timeline.dib{"data-dnt" => "true", "data-widget-id" => "421354655507951616", href: "https://twitter.com/RalphAtHamburg"}
 
-    .fl.w-100.w-third-ns.pa3
-      %p.tc.pb2.bb.bw2.b--light-blue
-        Über dies Seite
+.fl.w-100.w-third-ns.ph3
+  %p.tc.pb2.bb.bw2.b--light-blue
+    = t("index.about_title")
+  %p
+    = t("index.about")
 
-    .fl.w-100.w-third-ns.pa3
-      %p.tc.pb2.bb.bw2.b--light-blue
-        Meine Termine
+  %p.tc.pb2.bb.bw2.b--light-blue
+    = t("index.coworking_title")
+  %p
+    = t("index.coworking")
+
+.fl.w-100.w-third-ns.ph3
+  %p.tc.pb2.bb.bw2.b--light-blue
+    = t("index.dates")
+  %div
+    %a.dib{:href => "http://re-publica.de", :title => "re:publica 16 - TEN"}
+      %img{:alt => "re:publica 17 #LoveOutLoud", :src => "https://re-publica.com/files/banner/rp17_Banner_300X250.gif"}/
+
+    - data.events.dates.each do |d|
+      %div
+        = d.date
+      %div
+        = link_to d.name, d.url
+
+-# ---------------------------------------------------------
+-# The JS for the twitter timeline
+-# ---------------------------------------------------------
+
+:javascript
+  ! function (d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    p = /^http:/.test(d.location) ? 'http' : 'https';
+  if (!d.getElementById(id)) {
+    js = d.createElement(s);
+    js.id = id;
+    js.src = p + "://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }
+  }(document, "script", "twitter-wjs");
