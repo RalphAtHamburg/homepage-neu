@@ -1,10 +1,18 @@
-%header.f3.pv3.ph2
+- @logo = t("header.logo")
+- @about = t("header.about")
+- @blog = t("header.blog")
+- @contact = t("header.contact")
 
-  %nav
-    %nav.pa3.pa4-ns
-      .fl.w-30
-        %a.link.dim.black.b.f6.f5-ns.dib.mr3{:href => "/index.html", :title => "Home"} Ralph Möcklinghoff
-      .fl.w-70.tr
-        %a.link.dim.gray.f6.f5-ns.dib.mr3{:href => "/about.html", :title => "Home"} Über mich
-        %a.link.dim.gray.f6.f5-ns.dib.mr3{:href => "#{}", :title => "About"} Blog
-        %a.link.dim.gray.f6.f5-ns.dib.mr3{:href => "/contact.html", :title => "Store"} Kontakt
+%header.fl.w-100.f3
+
+  .fl.w-30
+    %a.link.dim.light-blue.dib.mr3.sommet-rounded{:href => "/index.html", :title => @logo}
+      = t("header.logo")
+
+  %nav.fl.w-70.tr
+    %a.link.dim.black-90.mr3{:href => "/about.html", :title => @about}
+      = t("header.about")
+    %a.link.dim.black-90.mr3{:href => "#", :title => @blog}
+      = t("header.blog")
+    %a.link.dim.black-90.mr3{:href => "/contact.html", :title => @contact}
+      = t("header.contact")
