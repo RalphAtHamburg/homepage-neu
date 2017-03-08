@@ -38,15 +38,15 @@
 .fl.w-100.w-third-ns.ph2.ph4-ns.p
   %p.tc.pb2.f5.b.mv4
     = t("index.dates")
-  %div
-    %a.dib{:href => "http://re-publica.de", :title => "re:publica 16 - TEN"}
-      = image_tag 'https://re-publica.com/files/banner/rp17_Banner_440X150.gif', :alt => 're:publica 17 #LoveOutLoud'
 
-    - data.events.dates.each do |d|
-      %div
-        = d.date
-      %div
-        = link_to d.name, d.url
+  = link_to (image_tag 'https://re-publica.com/files/banner/rp17_Banner_440X150.gif', :alt => 're:publica 17 #LoveOutLoud'), "http://re-publica.de", :class => "dib dim link pb2"
+
+  - data.events.dates.each do |d|
+    .f5.pt2
+      = d.date
+
+    = link_to d.name, d.url, :class => "dib pb3 link dim black-90"
+
 
 -# ---------------------------------------------------------
 -# The JS for the twitter timeline
