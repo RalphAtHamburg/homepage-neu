@@ -3,13 +3,13 @@
 - @blog = t("header.blog")
 - @contact = t("header.contact")
 
-%header.fl.w-100.f3
+%header.fl.w-100.f5.f3-ns
 
-  .fl.w-30
+  .fl.w-100.w-30-ns.pb2.pb-0-ns
     %a.link.dim.light-blue.dib.mr3.sommet-rounded{:href => "/index.html", :title => @logo}
       = @logo
 
-  %nav.fl.w-70.tr
+  %nav.fl.w-100.w-70-ns.tl.tr-ns
     %a.link.dim.black-90.mr3{:href => "/about.html", :title => @about}
       = @about
     %a.link.dim.black-90.mr3{:href => "#", :title => @blog}

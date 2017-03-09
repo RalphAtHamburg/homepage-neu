@@ -1,29 +1,49 @@
-.fl.w-100.pv4.f1.sommet-rounded.black-90
+-# -----------------------------------------------------------------------------
+-# Headline
+-# -----------------------------------------------------------------------------
+.fl.w-100.pv4.f3.f1-ns.sommet-rounded.black-90
   = t("index.headline")
 
+-# -----------------------------------------------------------------------------
+-# Big image whole width
+-# -----------------------------------------------------------------------------
 .fl.w-100
-  = image_tag 'banner.jpg', :alt => "banner"
+  = image_tag "banner.jpg", :alt => "banner"
 
-.fl.w-100.pv4.f3.lh-copy.tracked.sommet-rounded.black-90
+-# -----------------------------------------------------------------------------
+-# Claim of the page
+-# -----------------------------------------------------------------------------
+.fl.w-100.pv4.f5.f3-ns.lh-copy.tracked.sommet-rounded.black-90
   = t("index.claim")
 
+-# -----------------------------------------------------------------------------
+-# Two blocks of text for websites and application
+-# -----------------------------------------------------------------------------
 .fl.w-100.w-50-ns
   .f4.b
     = t("index.applications_title")
-  %p.f4.lh-copy
+  %p.f5.f4-ns.lh-copy
     = t("index.applications")
 
 .fl.w-100.w-50-ns
   .f4.b
     = t("index.sites_title")
-  %p.f4.lh-copy
+  %p.f5.f4-ns.lh-copy
     = t("index.sites")
 
-.fl.w-100.w-third-ns.f5
+-# -----------------------------------------------------------------------------
+-# Three blocks with twitter stream, about this page and events
+-# -----------------------------------------------------------------------------
+-# Twitter stream
+-# -----------------------------------------------------------------------------
+.fl.w-100.w-third-ns
   %p.tc.b.mv4
     = t("index.twitter")
   %a.twitter-timeline.dib{"data-dnt" => "true", "data-widget-id" => "421354655507951616", href: "https://twitter.com/RalphAtHamburg"}
 
+-# -----------------------------------------------------------------------------
+-# About this page
+-# -----------------------------------------------------------------------------
 .fl.w-100.w-third-ns.ph2.f5
   %p.tc.b.mv4
     = t("index.about_title")
@@ -35,11 +55,14 @@
   %p.f5.lh-copy
     = t("index.coworking")
 
+-# -----------------------------------------------------------------------------
+-# My events
+-# -----------------------------------------------------------------------------
 .fl.w-100.w-third-ns.ph2.ph4-ns.p
   %p.tc.pb2.f5.b.mv4
     = t("index.dates")
 
-  = link_to (image_tag 'https://re-publica.com/files/banner/rp17_Banner_440X150.gif', :alt => 're:publica 17 #LoveOutLoud'), "http://re-publica.de", :class => "dib dim link pb2"
+  = link_to (image_tag "https://re-publica.com/files/banner/rp17_Banner_440X150.gif", :alt => "re:publica 17 #LoveOutLoud"), "http://re-publica.de", :class => "dib dim link pb2"
 
   - data.events.dates.each do |d|
     .f5.pt2
@@ -47,15 +70,13 @@
 
     = link_to d.name, d.url, :class => "dib pb3 link dim black-90"
 
-
--# ---------------------------------------------------------
+-# -----------------------------------------------------------------------------
 -# The JS for the twitter timeline
 -# ---------------------------------------------------------
-
 :javascript
   ! function (d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
-    p = /^http:/.test(d.location) ? 'http' : 'https';
+    p = /^http:/.test(d.location) ? "http" : "https";
   if (!d.getElementById(id)) {
     js = d.createElement(s);
     js.id = id;
