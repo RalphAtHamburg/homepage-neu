@@ -6,6 +6,14 @@
     %meta{:charset => "utf-8"}/
     %meta{:content => "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no", :name => "viewport"}/
 
+    -# Show the baseline for pretty typography
+    %script{:src => "http://files.keyes.ie/things/baseliner/baseliner-latest.min.js"}
+      :cdata
+    :javascript
+      window.onload = function() {
+        baseliner = new Baseliner(24);
+      }
+
     -# Use title if it's in the page YAML frontmatter
     %title= current_page.data.title || "Middleman"
 
